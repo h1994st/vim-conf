@@ -217,6 +217,6 @@ hi IndentGuidesOdd  guibg=red   ctermbg=3
 hi IndentGuidesEven guibg=green ctermbg=4
 
 " Set YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Don't ask when starting Vim
-let g:ycm_confirm_extra_conf = 0
+" let g:ycm_confirm_extra_conf = 0
