@@ -198,6 +198,13 @@ map <F8> :TlistToggle<CR>
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
 let Tlist_Show_One_File=1
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    " Do Mac stuff here
+    let g:Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+  endif
+endif
 
 " Set Tabstop
 set tabstop=4
