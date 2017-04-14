@@ -41,6 +41,14 @@ Plugin 'tomasr/molokai'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'Townk/vim-autoclose'
 
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    Plugin 'gilligan/vim-lldb'
+  endif
+endif
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
