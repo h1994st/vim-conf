@@ -237,5 +237,10 @@ hi IndentGuidesEven guibg=green ctermbg=4
 " let g:ycm_confirm_extra_conf = 0
 
 " clang_complete
-let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+  endif
+endif
 
