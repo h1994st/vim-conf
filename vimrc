@@ -34,6 +34,9 @@ Plugin 'taglist.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'airblade/vim-gitgutter'
 
+" Solidity
+Plugin 'tomlion/vim-solidity'
+
 " Color schemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
