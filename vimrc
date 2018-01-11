@@ -30,7 +30,7 @@ Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'godlygeek/tabular'
-Plugin 'taglist.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'airblade/vim-gitgutter'
 
@@ -40,6 +40,17 @@ Plugin 'tomlion/vim-solidity'
 " Color schemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
+
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'Townk/vim-autoclose'
+
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    Plugin 'gilligan/vim-lldb'
+  endif
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -197,15 +208,12 @@ let g:jellybeans_use_lowcolor_black = 0
 map <F2> :NERDTreeToggle<CR>
 
 " Taglist.vim
-map <F8> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Use_Right_Window=1
-let Tlist_Show_One_File=1
+map <F8> :TagbarToggle<CR>
 if has("unix")
   let s:uname = system("uname -s")
-  if s:uname == "Darwin"
+  if s:uname == "Darwin\n"
     " Do Mac stuff here
-    let g:Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+    let g:tagbar_ctags_bin='/usr/local/bin/ctags'
   endif
 endif
 
@@ -230,3 +238,12 @@ hi IndentGuidesEven guibg=green ctermbg=4
 " let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Don't ask when starting Vim
 " let g:ycm_confirm_extra_conf = 0
+
+" clang_complete
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+  endif
+endif
+
