@@ -244,6 +244,8 @@ if has("unix")
   let s:uname = system("uname -s")
   if s:uname == "Darwin\n"
     let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+  elseif s:uname == "Linux\n"
+    let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so'
   endif
 endif
 
