@@ -37,6 +37,9 @@ Plugin 'airblade/vim-gitgutter'
 " Solidity
 Plugin 'tomlion/vim-solidity'
 
+" Docker
+Plugin 'ekalinin/Dockerfile.vim'
+
 " Color schemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
