@@ -209,6 +209,7 @@ let g:jellybeans_use_lowcolor_black = 0
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Taglist.vim
 map <F8> :TagbarToggle<CR>
@@ -248,7 +249,7 @@ if has("unix")
   if s:uname == "Darwin\n"
     let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
   elseif s:uname == "Linux\n"
-    let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so'
+    let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
   endif
 endif
 
