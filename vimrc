@@ -44,6 +44,9 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
 
+" TLA+
+Plugin 'hwayne/tla.vim'
+
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'Townk/vim-autoclose'
 
