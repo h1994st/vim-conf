@@ -47,7 +47,8 @@ Plugin 'tomasr/molokai'
 " TLA+
 Plugin 'hwayne/tla.vim'
 
-Plugin 'Rip-Rip/clang_complete'
+Plugin 'justmao945/vim-clang'
+" Plugin 'Rip-Rip/clang_complete'
 Plugin 'Townk/vim-autoclose'
 
 if has("unix")
@@ -247,12 +248,16 @@ hi IndentGuidesEven guibg=green ctermbg=4
 " let g:ycm_confirm_extra_conf = 0
 
 " clang_complete
-if has("unix")
-  let s:uname = system("uname -s")
-  if s:uname == "Darwin\n"
-    let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
-  elseif s:uname == "Linux\n"
-    let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
-  endif
-endif
+" if has("unix")
+" let s:uname = system("uname -s")
+"   if s:uname == "Darwin\n"
+"     let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+"   elseif s:uname == "Linux\n"
+"     let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
+"   endif
+" endif
+
+" vim-clang
+let g:clang_c_options = '-std=gnu11'
+let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 
