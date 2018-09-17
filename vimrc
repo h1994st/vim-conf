@@ -47,8 +47,11 @@ Plugin 'tomasr/molokai'
 " TLA+
 Plugin 'hwayne/tla.vim'
 
+" C/C++
+Plugin 'bfrg/vim-cpp-modern'
 Plugin 'justmao945/vim-clang'
 " Plugin 'Rip-Rip/clang_complete'
+
 Plugin 'Townk/vim-autoclose'
 
 if has("unix")
