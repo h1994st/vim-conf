@@ -47,16 +47,7 @@ Plugin 'tomasr/molokai'
 " TLA+
 Plugin 'hwayne/tla.vim'
 
-Plugin 'Rip-Rip/clang_complete'
 Plugin 'Townk/vim-autoclose'
-
-if has("unix")
-  let s:uname = system("uname -s")
-  if s:uname == "Darwin\n"
-    " Do Mac stuff here
-    Plugin 'gilligan/vim-lldb'
-  endif
-endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,7 +114,7 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
-  
+
   set nocp
 
   " Put these in an autocmd group, so that we can delete them easily.
@@ -181,14 +172,14 @@ au FileType html,python,vim,javascript setl shiftwidth=2
 au FileType html,python,vim,javascript setl tabstop=2
 au FileType java,php setl shiftwidth=4
 au FileType java,php setl tabstop=4
- 
+
 set smarttab
 set lbr
 set tw=0
 
 " Auto indent
 set ai
- 
+
 " Smart indet
 set si
 
@@ -255,4 +246,11 @@ if has("unix")
     let g:clang_library_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
   endif
 endif
+
+" PRISM syntax highlight
+au BufRead,BufNewFile *.prism setfiletype prismmodel
+au BufRead,BufNewFile *.[pns]m setfiletype prismmodel
+au BufRead,BufNewFile *.smg setfiletype prismmodel
+au BufRead,BufNewFile *.props setfiletype prismproperty
+au BufRead,BufNewFile *.pctl setfiletype prismproperty
 
