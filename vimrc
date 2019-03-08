@@ -52,6 +52,9 @@ Plugin 'bfrg/vim-cpp-modern'
 " Plugin 'justmao945/vim-clang'
 " Plugin 'Rip-Rip/clang_complete'
 
+" Swift
+Plugin 'keith/swift.vim'
+
 Plugin 'Townk/vim-autoclose'
 
 " All of your Plugins must be added before the following line
