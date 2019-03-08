@@ -55,6 +55,9 @@ Plugin 'bfrg/vim-cpp-modern'
 " Swift
 Plugin 'keith/swift.vim'
 
+" NuSMV
+Plugin 'wannesm/wmnusmv.vim'
+
 Plugin 'Townk/vim-autoclose'
 
 " All of your Plugins must be added before the following line
