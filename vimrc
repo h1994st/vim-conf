@@ -235,6 +235,7 @@ set cursorline
 
 " Set Ruler
 set ruler
+set colorcolumn=80
 
 " Set indent guides
 let g:indent_guides_auto_colors=0
