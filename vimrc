@@ -63,6 +63,9 @@ Plugin 'Townk/vim-autoclose'
 " Tamarin
 Plugin 'tamarin-prover/editors'
 
+" TOML
+Plugin 'cespare/vim-toml'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
